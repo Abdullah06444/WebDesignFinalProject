@@ -1,0 +1,14 @@
+.r1{    background-color:#e0cd8e;  }
+.r2{    background-color:#ead0b0;  }
+.r3{    background-color:#d4b395;  }
+
+input[type=text],input[type=button]{    float:left;  }
+
+body,h1,h2,h4,h5,h6 {    font-family: "Chonburi", cursive, sans-serif;   }
+.menu {display: none}
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90%;
+}
+

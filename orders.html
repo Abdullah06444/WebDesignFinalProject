@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleaboutus.css">
+    <link rel="stylesheet" href="styleorders.css">
+    <link rel="stylesheet" href="stylemybasket.css">
+    <link rel="stylesheet" href="styleblog.css">
+    <link rel="stylesheet" href="stylecontact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/95873da015.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+
+</head>
+<body>
+
+    <div id="social">
+
+        <font>KASAP DÖNER   |<span>   Keser Döner Kasap Ömer Yemek Biter Hesap Döner</span></font>
+        <i class="fas fa-search"><input type="text" placeholder="Arama..." onclick="search();"></i>
+
+        <a href="https://www.abdullahgur.com.tr" target="_blank"><i class="fas fa-sitemap"></i></a>
+        <a href="https://github.com/Abdullah06444" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://gitlab.com/Abdullah06444" target="_blank"><i class="fab fa-gitlab"></i></a>
+        <a href="https://www.linkedin.com/in/abdullah-g%C3%BCr-b86b9616b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/abdullah44gur" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/abdullah06444/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCCY6a6z-gZyybCfnUsuQ8OQ" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div>
+
+        <section>
+            <img id="headerImage" src="images/sitelogos/logoheader.png" alt="Foto Yüklenemedi.">
+            <div id="centered"><img id="headerImage" src="images/sitelogos/onecıkanlogolu.png" alt="Foto Yüklenemedi."></div>
+        </section>
+
+        <header id="header"><!--Header-->
+
+            <nav><!--Menuler-->
+
+                <ul>
+
+                    <li><a href="index.html" target="_blank"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                    <li><a href="aboutus.html" target="_blank"><i class="fas fa-comments"></i>Hakkımızda</a></li>
+                    <li><a href="orders.html" target="_blank"><i class="fas fa-utensils"></i>Siparişler</a></li>
+                    <li><a href="mybasket.html" target="_blank"><i class="fas fa-shopping-basket"></i>Sepetim</a></li>
+                    <li><a href="blog.html" target="_blank"><i class="fas fa-th"></i>Blog</a></li>
+                    <li><a href="contact.html" target="_blank"><i class="fas fa-mail-bulk"></i>İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    </div>
+
+    <div style="background-image: url('images/sitelogos/onecıkanlogolu.png');">
+        <div id="container">
+            <section>
+
+                <main>
+                    <input type="text" class="button" id="adiniz">
+                    <input type="text" class="button" id="soyadiniz">
+                    <input type="text" class="button" id="siparisler">
+                    <input type="button" class="button" value="Sipariş Al" onclick="database();">
+                    <input type="button" class="button" value="Verileri Sil" onclick="clear2();">
+
+                    <table border="1" id="table1">
+                        <tr>
+                            <td>...............Adınız..................</td><td>............Soyadınız................</td><td>..........Siparişler..................</td>
+                        </tr>
+                    </table>
+                </main>
+            </section>
+        </div>
+
+        <div id="container">
+
+            <section>
+
+                <main>
+
+                    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+                        <div class="w3-content">
+
+                            <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">THE MENU</h1>
+                            <div class="w3-row w3-center w3-border w3-border-dark-grey">
+                                <a href="javascript:void(0)" onclick="openMenu(event, 'Meals');" id="myLink">
+                                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Döner/Kebap</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openMenu(event, 'MealsPor');">
+                                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Porsiyon Tabak</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+                                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">İçecekler</div>
+                                </a>
+                                <a href="javascript:void(0)" onclick="openMenu(event, 'Deserts');">
+                                    <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Tatlılar</div>
+                                </a>
+                            </div>
+
+                            <div id="Meals" class="w3-container menu w3-padding-32 w3-white">
+                                <img src="images/meals/donersomunekmek.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Döner Ekmek</b><span class="w3-right w3-tag w3-dark-grey w3-round">11.50₺</span></h4>
+                                <p class="w3-text-grey">Taze et, domates ve salatalı mis gibi somun ekmek arası döner</p>
+                                <hr>
+
+                                <img src="images/meals/donerekmek.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Dürüm Ekmek</b><span class="w3-right w3-tag w3-dark-grey w3-round">12.50₺</span></h4>
+                                <p class="w3-text-grey">Taze et, domates ve salatalı mis gibi ekmek arası dürüm</p>
+                                <hr>
+
+                                <img src="images/meals/gelal.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Dürüm Ekmek Gel Al</b><span class="w3-right w3-tag w3-dark-grey w3-round">10.50₺</span></h4>
+                                <p class="w3-text-grey">Gel al kampanyası</p>
+                                <hr>
+
+                                <img src="images/meals/sucukekmek.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Sucuk Ekmek</b><span class="w3-right w3-tag w3-dark-grey w3-round">11.00₺</span></h4>
+                                <p class="w3-text-grey">Mis gibi kangal sucuk</p>
+                                <hr>
+                            </div>
+
+                            <div id="MealsPor" class="w3-container menu w3-padding-32 w3-white">
+                                <img src="images/meals/meatball.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Köfte Porsiyon/100 gr</b><span class="w3-right w3-tag w3-dark-grey w3-round">22.50₺</span></h4>
+                                <p class="w3-text-grey">Taze, leziz köfte, soğan</p>
+                                <hr>
+
+                                <img src="images/meals/koftepilav.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Köfte Pilav/80 gr</b><span class="w3-right w3-tag w3-dark-grey w3-round">19.50₺</span></h4>
+                                <p class="w3-text-grey">Sıcak sıcak Pilav ve köfte</p>
+                                <hr>
+
+                                <img src="images/meals/kasap-kofte-v2.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Köfte Pilav/80 gr</b><span class="w3-right w3-tag w3-dark-grey w3-round">19.50₺</span></h4>
+                                <p class="w3-text-grey">Közde kızarmış biber, tereyağlı bulgur pilavı</p>
+                                <hr>
+
+                                <img src="images/meals/iskender.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>İskender/60 gr</b><span class="w3-right w3-tag w3-dark-grey w3-round">20.00₺</span></h4>
+                                <p class="w3-text-grey">Yoğurtlu, soslu, dana etli iskender</p>
+                                <hr>
+                            </div>
+
+                            <div id="Drinks" class="w3-container menu w3-padding-32 w3-white">
+                                <img src="images/drinks/ayran.png" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Ayran</b><span class="w3-right w3-tag w3-dark-grey w3-round">1.50₺</span></h4>
+                                <p class="w3-text-grey">Sütaş Ayran</p>
+                                <hr>
+
+                                <img src="images/drinks/cola.png" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Kola</b><span class="w3-right w3-tag w3-dark-grey w3-round">3.50₺</span></h4>
+                                <p class="w3-text-grey">Coca Cola</p>
+                                <hr>
+
+                                <img src="images/drinks/yellowcola.png" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Sarı Kola</b><span class="w3-right w3-tag w3-dark-grey w3-round">3.50₺</span></h4>
+                                <p class="w3-text-grey">Portakallı Fanta</p>
+                                <hr>
+
+                                <img src="images/drinks/fruitjuice.png" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Meyve Suyu</b><span class="w3-right w3-tag w3-dark-grey w3-round">2.00₺</span></h4>
+                                <p class="w3-text-grey">Cappy Karışık</p>
+                                <hr>
+
+                                <img src="images/drinks/fusetea.png" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Soğuk Çay</b><span class="w3-right w3-tag w3-dark-grey w3-round">2.00₺</span></h4>
+                                <p class="w3-text-grey">Fuse Tea</p>
+                                <hr>
+
+                                <img src="images/drinks/sodawater.png" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Soda</b><span class="w3-right w3-tag w3-dark-grey w3-round">2.50₺</span></h4>
+                                <p class="w3-text-grey">Sprite Gazoz</p>
+                                <hr>
+
+                                <img src="images/drinks/water.png" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Şişe Su</b><span class="w3-right w3-tag w3-dark-grey w3-round">0.75₺</span></h4>
+                                <p class="w3-text-grey">Kaynak Suyu</p>
+                                <hr>
+                            </div>
+
+                            <div id="Deserts" class="w3-container menu w3-padding-32 w3-white">
+                                <img src="images/deserts/puding.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Puding</b><span class="w3-right w3-tag w3-dark-grey w3-round">3.00₺</span></h4>
+                                <p class="w3-text-grey">Kakaolu puding</p>
+                                <hr>
+
+                                <img src="images/deserts/sutlac.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Sütlaç</b><span class="w3-right w3-tag w3-dark-grey w3-round">3.00₺</span></h4>
+                                <p class="w3-text-grey">Sütlü sütlaç</p>
+                                <hr>
+
+                                <img src="images/deserts/kazandibi.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Kazandibi</b><span class="w3-right w3-tag w3-dark-grey w3-round">3.00₺</span></h4>
+                                <p class="w3-text-grey">Sütlü tatlı</p>
+                                <hr>
+
+                                <img src="images/deserts/kunefe.jpg" alt="Foto Yüklenemedi." height="200px" class="images">
+                                <h4 class="button"><b>Künefe</b><span class="w3-right w3-tag w3-dark-grey w3-round">4.00₺</span></h4>
+                                <p class="w3-text-grey">Sıcacık künefe</p>
+                                <hr>
+                            </div>
+
+                        </div>
+                    </div>
+                </main>
+            </section>
+        </div>
+    </div>
+
+    <div>
+        <footer id="header"><section>Tüm Hakları Saklıdır &copy; | Abdullah Gür 2021</section></footer>
+
+        <section>
+            <h3>ŞUBELERİMİZ</h3>
+            <div class="content">
+
+                <h3>MERKEZ ANKARA</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.9981478072153!2d32.85384582922333!3d39.919181998714144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU1JzA5LjEiTiAzMsKwNTEnMTUuOCJF!5e0!3m2!1sen!2str!4v1611521379162!5m2!1sen!2str" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <span class="span2">Meşrutiyet Mahallesi, Atatürk Bulvarı, İnce Han kapalı çarşı, No= 203801013</span>
+                <span class="span2">06650 ÇANKAYA/ANKARA</span>
+                <span class="span2"><a href="tel://+905519810892">+90 312 419 ## ##</a></span>
+
+            </div>
+            <div class="content">
+
+                <h3>KAZAN ANKARA</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.5896853480936!2d32.674840315250606!3d40.195943979391465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDExJzQ1LjQiTiAzMsKwNDAnMzcuMyJF!5e0!3m2!1sen!2str!4v1611544295176!5m2!1sen!2str" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <span class="span2">Yıldırımbeyazıt Mahallesi, Osmanlı Caddesi, No= 203801013</span>
+                <span class="span2">06980 KAHRAMANKAZAN<br/>/ANKARA</span>
+                <span class="span2"><a href="tel://+905519810892">+90 312 814 ## ##</a></span>
+
+            </div>
+            <div class="content">
+
+                <h3>YEŞİLYURT MALATYA</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1564.2005641658454!2d38.27874865812689!3d38.36284099491413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDIxJzQ2LjIiTiAzOMKwMTYnNDcuNCJF!5e0!3m2!1sen!2str!4v1611544493674!5m2!1sen!2str" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <span class="span2">Seyran Mahallesi, Yeşiltepe Bezirgan Sokak, Yeşilevler Cami yanı, No= 203801013</span>
+                <span class="span2">44080 YEŞİLYURT/MALATYA</span>
+                <span class="span2"><a href="tel://+905519810892">+90 422 502 ## ##</a></span>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>
