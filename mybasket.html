@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Basket</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleaboutus.css">
+    <link rel="stylesheet" href="styleorders.css">
+    <link rel="stylesheet" href="stylemybasket.css">
+    <link rel="stylesheet" href="styleblog.css">
+    <link rel="stylesheet" href="stylecontact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/95873da015.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+
+    <div id="social">
+
+        <font>KASAP DÖNER   |<span>   Keser Döner Kasap Ömer Yemek Biter Hesap Döner</span></font>
+        <i class="fas fa-search"><input type="text" placeholder="Arama..." onclick="search();"></i>
+
+        <a href="https://www.abdullahgur.com.tr" target="_blank"><i class="fas fa-sitemap"></i></a>
+        <a href="https://github.com/Abdullah06444" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://gitlab.com/Abdullah06444" target="_blank"><i class="fab fa-gitlab"></i></a>
+        <a href="https://www.linkedin.com/in/abdullah-g%C3%BCr-b86b9616b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/abdullah44gur" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/abdullah06444/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCCY6a6z-gZyybCfnUsuQ8OQ" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div>
+
+        <section>
+            <img id="headerImage" src="images/sitelogos/logoheader.png" alt="Foto Yüklenemedi.">
+            <div id="centered"><img id="headerImage" src="images/sitelogos/onecıkanlogolu.png" alt="Foto Yüklenemedi."></div>
+        </section>
+
+        <header id="header"><!--Header-->
+
+            <nav><!--Menuler-->
+
+                <ul>
+
+                    <li><a href="index.html" target="_blank"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                    <li><a href="aboutus.html" target="_blank"><i class="fas fa-comments"></i>Hakkımızda</a></li>
+                    <li><a href="orders.html" target="_blank"><i class="fas fa-utensils"></i>Siparişler</a></li>
+                    <li><a href="mybasket.html" target="_blank"><i class="fas fa-shopping-basket"></i>Sepetim</a></li>
+                    <li><a href="blog.html" target="_blank"><i class="fas fa-th"></i>Blog</a></li>
+                    <li><a href="contact.html" target="_blank"><i class="fas fa-mail-bulk"></i>İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    </div>
+
+    <div style="background-image: url('images/sitelogos/onecıkanlogolu.png');">
+        <div id="container">
+
+            <img class="motion" src="images/sitelogos/onecıkanlogolu.png" alt="Foto Yüklenemedi.">
+            <section>
+
+                <main>
+                    <input type="text" class="button" id="adiniz">
+                    <input type="text" class="button" id="soyadiniz">
+                    <input type="text" class="button" id="siparisler">
+                    <input type="button" class="button" value="Hesap Ödeme" onclick="database();">
+
+                    <table border="1" id="table1">
+                        <tr>
+                            <td>...........Yemek.Siparişi.........</td><td>..........İçecek.Siparişi........</td><td>.........Tatlı.Siparişi............</td>
+                        </tr>
+                    </table>
+                </main>
+            </section>
+            <section>
+                <main>
+
+                    <div class="container">
+
+                        <label for="">ADET</label>
+                        <input class="button" type="number" name="" id="centered" value="1" min="1" max="20">
+                    </div>
+
+                    <h3>Kasap Ömer Hesabı Öder İşe Döner :D</h3>
+                </main>
+            </section>
+
+            <h3>FİYATI HESAPLAMA</h3>
+            <form name="form" action="">
+                <input class="button" class="text" name="text" type="text">
+            </form>
+            <table>
+                <tr>
+                    <td><input class="button" type="button" value="C" onclick="clear()"></td>
+                    <td><input class="button" type="button" value="<" onclick="back()"></td>
+                    <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
+                    <td><input class="button" type="button" value="*" onclick="insert('*')"></td>
+                </tr>
+                <tr>
+                    <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+                    <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+                    <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+                    <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
+                </tr>
+                <tr>
+                    <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+                    <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+                    <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+                    <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
+                </tr>
+                <tr>
+                    <td> <input class="button" type="button" value="1" onclick="insert(1)"> </td>
+                    <td> <input class="button" type="button" value="2" onclick="insert(2)"> </td>
+                    <td> <input class="button" type="button" value="3" onclick="insert(3)"></td>
+                    <td rowspan="2"> <input class="button" style="height: 106px" type="button" value="=" onclick="equal('=')"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <input class="button" style="width: 106px" type="button" value="0" onclick="insert(0)"> </td>
+                    <td> <input class="button" type="button" value="." onclick="insert('.')"> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <footer id="header"><section>Tüm Hakları Saklıdır &copy; | Abdullah Gür 2021</section></footer>
+
+        <section>
+            <h3>ŞUBELERİMİZ</h3>
+            <div class="content">
+
+                <h3>MERKEZ ANKARA</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.9981478072153!2d32.85384582922333!3d39.919181998714144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU1JzA5LjEiTiAzMsKwNTEnMTUuOCJF!5e0!3m2!1sen!2str!4v1611521379162!5m2!1sen!2str" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <span class="span2">Meşrutiyet Mahallesi, Atatürk Bulvarı, İnce Han kapalı çarşı, No= 203801013</span>
+                <span class="span2">06650 ÇANKAYA/ANKARA</span>
+                <span class="span2"><a href="tel://+905519810892">+90 312 419 ## ##</a></span>
+
+            </div>
+            <div class="content">
+
+                <h3>KAZAN ANKARA</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.5896853480936!2d32.674840315250606!3d40.195943979391465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDExJzQ1LjQiTiAzMsKwNDAnMzcuMyJF!5e0!3m2!1sen!2str!4v1611544295176!5m2!1sen!2str" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <span class="span2">Yıldırımbeyazıt Mahallesi, Osmanlı Caddesi, No= 203801013</span>
+                <span class="span2">06980 KAHRAMANKAZAN<br/>/ANKARA</span>
+                <span class="span2"><a href="tel://+905519810892">+90 312 814 ## ##</a></span>
+
+            </div>
+            <div class="content">
+
+                <h3>YEŞİLYURT MALATYA</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1564.2005641658454!2d38.27874865812689!3d38.36284099491413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDIxJzQ2LjIiTiAzOMKwMTYnNDcuNCJF!5e0!3m2!1sen!2str!4v1611544493674!5m2!1sen!2str" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <span class="span2">Seyran Mahallesi, Yeşiltepe Bezirgan Sokak, Yeşilevler Cami yanı, No= 203801013</span>
+                <span class="span2">44080 YEŞİLYURT/MALATYA</span>
+                <span class="span2"><a href="tel://+905519810892">+90 422 502 ## ##</a></span>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>
