@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Page</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleaboutus.css">
+    <link rel="stylesheet" href="styleorders.css">
+    <link rel="stylesheet" href="stylemybasket.css">
+    <link rel="stylesheet" href="styleblog.css">
+    <link rel="stylesheet" href="stylecontact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/95873da015.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+
+    <div id="social">
+
+        <font>KASAP DÖNER   |<span>   Keser Döner Kasap Ömer Yemek Biter Hesap Döner</span></font>
+        <i class="fas fa-search"><input type="text" placeholder="Arama..." onclick="search();"></i>
+
+        <a href="https://www.abdullahgur.com.tr" target="_blank"><i class="fas fa-sitemap"></i></a>
+        <a href="https://github.com/Abdullah06444" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://gitlab.com/Abdullah06444" target="_blank"><i class="fab fa-gitlab"></i></a>
+        <a href="https://www.linkedin.com/in/abdullah-g%C3%BCr-b86b9616b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/abdullah44gur" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/abdullah06444/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCCY6a6z-gZyybCfnUsuQ8OQ" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div>
+
+        <section>
+            <img id="headerImage" src="images/sitelogos/logoheader.png" alt="Foto Yüklenemedi.">
+            <div id="centered"><img id="headerImage" src="images/sitelogos/logotransparen.png" alt="Foto Yüklenemedi."></div>
+        </section>
+
+        <header id="header"><!--Header-->
+
+            <nav><!--Menuler-->
+
+                <ul>
+
+                    <li><a href="index.html" target="_blank"><i class="fas fa-home"></i>Ana Sayfa</a></li>
+                    <li><a href="aboutus.html" target="_blank"><i class="fas fa-comments"></i>Hakkımızda</a></li>
+                    <li><a href="orders.html" target="_blank"><i class="fas fa-utensils"></i>Siparişler</a></li>
+                    <li><a href="mybasket.html" target="_blank"><i class="fas fa-shopping-basket"></i>Sepetim</a></li>
+                    <li><a href="blog.html" target="_blank"><i class="fas fa-th"></i>Blog</a></li>
+                    <li><a href="contact.html" target="_blank"><i class="fas fa-mail-bulk"></i>İletişim</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    </div>
+
+    <div id="container">
+
+        <section>
+
+            <h3>LOKASYONUMUZ</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.9981478072153!2d32.85384582922333!3d39.919181998714144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU1JzA5LjEiTiAzMsKwNTEnMTUuOCJF!5e0!3m2!1sen!2str!4v1611521379162!5m2!1sen!2str" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+        </section>
+
+        <section>
+                <div class="content2">
+
+                    <h3>İLETİŞİM</h3>
+
+                    <!-- Mesaj dogrudan benim mail hesabıma geliyor. -->
+                    <form method="post" action="mailto:abdullah44gur@gmail.com?subject=subject&message=message" class="form" method="GET">
+                        <!-- Unnecessary name and password -->
+                        <p class="contentparagraph">İsim Soyisim:</p><input type = "text" name = "kullanıcı_adı" maxlength = "10" size = "20" placeholder="İsminiz" required/>
+                        <p class="contentparagraph">Mailiniz:</p><input pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" placeholder = "Mailiniz" required/>
+                        <p class="contentparagraph">Password:</p><input type = "password" name = "password" placeholder = "Mesaj id belirle" maxlength = "10" size = "15"/>
+                        <p class="contentparagraph"><strong>Contact:</strong></p><br/>
+                        <textarea name = "text" rows = "10" cols = "50" placeholder = "Mesajınız ..." maxlength = "500" required></textarea><br/>
+
+                        <input type = "file" value = "Upload your document" class="button"/>
+                        <input type = "reset" value = "Temizle" class="button"/>
+                        <input type = "submit" value = "Gönder" class="button"/><br/>
+                        <a href="https://twitter.com/abdullah44gur?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Bizi Twitter'dan Takip Edin</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br/>
+                    </form>
+
+                </div>
+
+                <div class="address">
+                    <h3>MERKEZ ADRESİMİZ</h3>
+
+                    <span class="span2">Meşrutiyet Mahallesi, Atatürk Bulvarı, İnce Han, No= 203801013</span>
+                    <span class="span2">06650 ÇANKAYA/ANKARA</span>
+                    <span class="span2"><a href="https://www.abdullahgur.com.tr" target="_blank">Sitemiz</a></span>
+
+                </div>
+        </section>
+    </div>
+
+    <div>
+        <footer id="header"><section>Tüm Hakları Saklıdır &copy; | Abdullah Gür 2021</section></footer>
+
+        <section>
+            <h3>ŞUBELERİMİZ</h3>
+            <div class="content">
+
+                <h3>MERKEZ ANKARA</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764.9981478072153!2d32.85384582922333!3d39.919181998714144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU1JzA5LjEiTiAzMsKwNTEnMTUuOCJF!5e0!3m2!1sen!2str!4v1611521379162!5m2!1sen!2str" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <span class="span2">Meşrutiyet Mahallesi, Atatürk Bulvarı, İnce Han kapalı çarşı, No= 203801013</span>
+                <span class="span2">06650 ÇANKAYA/ANKARA</span>
+                <span class="span2"><a href="tel://+905519810892">+90 312 419 ## ##</a></span>
+
+            </div>
+            <div class="content">
+
+                <h3>KAZAN ANKARA</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.5896853480936!2d32.674840315250606!3d40.195943979391465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDExJzQ1LjQiTiAzMsKwNDAnMzcuMyJF!5e0!3m2!1sen!2str!4v1611544295176!5m2!1sen!2str" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <span class="span2">Yıldırımbeyazıt Mahallesi, Osmanlı Caddesi, No= 203801013</span>
+                <span class="span2">06980 KAHRAMANKAZAN<br/>/ANKARA</span>
+                <span class="span2"><a href="tel://+905519810892">+90 312 814 ## ##</a></span>
+
+            </div>
+            <div class="content">
+
+                <h3>YEŞİLYURT MALATYA</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1564.2005641658454!2d38.27874865812689!3d38.36284099491413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDIxJzQ2LjIiTiAzOMKwMTYnNDcuNCJF!5e0!3m2!1sen!2str!4v1611544493674!5m2!1sen!2str" width="" height="" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <span class="span2">Seyran Mahallesi, Yeşiltepe Bezirgan Sokak, Yeşilevler Cami yanı, No= 203801013</span>
+                <span class="span2">44080 YEŞİLYURT/MALATYA</span>
+                <span class="span2"><a href="tel://+905519810892">+90 422 502 ## ##</a></span>
+
+            </div>
+        </section>
+    </div>
+</body>
+</html>
